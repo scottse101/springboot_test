@@ -27,4 +27,15 @@ public class CalculatorController {
 
         return calculationLog;
     }
+
+    @PostMapping("/calculateJSON")
+    public CalculationLog calculateJSON(@RequestBody CalculationLog calculationLog) {
+        System.out.println("Received calculation request: " + calculationLog.getExpression());
+
+        CalculationLog result = calculatorService.calculate(calculationLog.getExpression());
+
+        System.out.println("Calculation result: " + result.getResult());
+
+        return result;
+    }
 }
