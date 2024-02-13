@@ -10,9 +10,11 @@ public class CalculationLog {
         this.result = result;
     }
 
-    public String getResult() {
-        return null;
+    public String getExpression() {
+        return expression;
     }
 
-    // Add getters and setters
+    public double getResult() {
+        return result;
+    }
 }

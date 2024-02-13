@@ -19,13 +19,10 @@ public class CalculatorController {
 
     @PostMapping("/calculate")
     public CalculationLog calculate(@RequestBody String expression) {
-        // Log the incoming request
         System.out.println("Received calculation request: " + expression);
 
-        // Perform calculation using the service
         CalculationLog calculationLog = calculatorService.calculate(expression);
 
-        // Log the result
         System.out.println("Calculation result: " + calculationLog.getResult());
 
         return calculationLog;
