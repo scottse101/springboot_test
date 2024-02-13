@@ -1,6 +1,6 @@
-package com.example.calculator.service;
+package edu.ntnu.idatt2105.service;
 
-import com.example.calculator.model.CalculationLog;
+import edu.ntnu.idatt2105.model.CalculationLog;
 import org.springframework.stereotype.Service;
 
 @Service

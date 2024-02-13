@@ -1,10 +1,10 @@
-package com.example.calculator;
+package edu.ntnu.idatt2105;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-class DemoApplicationTests {
+class AppTests {
 
 	@Test
 	void contextLoads() {

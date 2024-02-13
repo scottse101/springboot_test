@@ -1,4 +1,4 @@
-package com.example.calculator.model;
+package edu.ntnu.idatt2105.model;
 
 public class CalculationLog {
 
@@ -8,6 +8,10 @@ public class CalculationLog {
     public CalculationLog(String expression, double result) {
         this.expression = expression;
         this.result = result;
+    }
+
+    public String getResult() {
+        return null;
     }
 
     // Add getters and setters

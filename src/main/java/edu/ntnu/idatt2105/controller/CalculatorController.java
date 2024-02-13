@@ -1,7 +1,7 @@
-package com.example.calculator.controller;
+package edu.ntnu.idatt2105.controller;
 
-import com.example.calculator.model.CalculationLog;
-import com.example.calculator.service.CalculatorService;
+import edu.ntnu.idatt2105.model.CalculationLog;
+import edu.ntnu.idatt2105.service.CalculatorService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
