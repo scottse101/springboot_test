@@ -1,5 +1,5 @@
 package edu.ntnu.idatt2105.model;
-import javax.persistence.*;
+import jakarta.persistence.*;
 
 public class CalculationLog {
 

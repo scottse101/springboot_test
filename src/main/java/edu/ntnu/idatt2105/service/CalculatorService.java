@@ -23,9 +23,12 @@ public class CalculatorService {
         // Perform calculation
         double result = // Your calculation logic
 
-                // Save calculation log in the database
+                // Get the user from the repository
                 User user = userRepository.findByUsername(username);
-        CalculationLog calculationLog = new CalculationLog(expression, result, user);
+
+        // Save calculation log in the database
+        CalculationLog calculationLog = new CalculationLog(expression, result);
+        calculationLog.setUser(user);
         calculationLogRepository.save(calculationLog);
 
         return result;
