@@ -24,4 +24,9 @@ public class CalculationLog {
     public double getResult() {
         return result;
     }
+
+    public void setUser(User user) {
+        this.user = user;
+    }
+
 }

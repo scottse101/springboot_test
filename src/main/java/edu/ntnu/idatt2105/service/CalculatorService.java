@@ -21,7 +21,7 @@ public class CalculatorService {
 
     public double calculate(String expression, String username) {
         // Perform calculation
-        double result = // Your calculation logic
+        double result = 0.0;// Your calculation logic
 
                 // Get the user from the repository
                 User user = userRepository.findByUsername(username);
