@@ -1,33 +1,20 @@
 package edu.ntnu.idatt2105.model;
-import jakarta.persistence.*;
 
-@Entity
 public class CalculationLog {
-
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
-    private String expression;
-    private double result;
-
-    @ManyToOne
+    private String equation;
     private User user;
 
-    public CalculationLog() {
-    }
-
-    public CalculationLog(String expression, double result, User user) {
-        this.expression = expression;
-        this.result = result;
+    public CalculationLog(String equation, User user) {
+        this.equation = equation;
         this.user = user;
     }
 
-    public String getExpression() {
-        return expression;
+    public String getEquation() {
+        return equation;
     }
 
-    public double getResult() {
-        return result;
+    public void setEquation(String equation) {
+        this.equation = equation;
     }
 
     public User getUser() {
@@ -37,5 +24,4 @@ public class CalculationLog {
     public void setUser(User user) {
         this.user = user;
     }
-
 }
