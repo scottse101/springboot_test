@@ -13,9 +13,13 @@ public class CalculationLog {
     @ManyToOne
     private User user;
 
-    public CalculationLog(String expression, double result) {
+    public CalculationLog() {
+    }
+
+    public CalculationLog(String expression, double result, User user) {
         this.expression = expression;
         this.result = result;
+        this.user = user;
     }
 
     public String getExpression() {
@@ -24,6 +28,10 @@ public class CalculationLog {
 
     public double getResult() {
         return result;
+    }
+
+    public User getUser() {
+        return user;
     }
 
     public void setUser(User user) {
