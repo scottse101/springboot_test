@@ -1,5 +1,5 @@
 package edu.ntnu.idatt2105.model;
-import javax.persistence.*;
+import jakarta.persistence.*;
 
 @Entity
 public class CalculationLog {
@@ -25,4 +25,9 @@ public class CalculationLog {
     public double getResult() {
         return result;
     }
+
+    public void setUser(User user) {
+        this.user = user;
+    }
+
 }
