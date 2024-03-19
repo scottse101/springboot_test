@@ -1,6 +1,7 @@
 package edu.ntnu.idatt2105.model;
 import javax.persistence.*;
 
+@Entity
 public class CalculationLog {
 
     @Id
