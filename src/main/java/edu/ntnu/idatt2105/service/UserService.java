@@ -33,6 +33,9 @@ public class UserService {
     public User getUserByUsername(String username) {
         return userRepository.findByUsername(username);
     }
+    public String getPasswordByUsername(String username) {
+        return userRepository.findByUsername(username).getPassword();
+    }
 
     public User saveUser(User user) {
         return userRepository.save(user);

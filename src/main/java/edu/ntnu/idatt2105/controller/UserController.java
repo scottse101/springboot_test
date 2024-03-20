@@ -82,5 +82,15 @@ public class UserController {
         }
     }
 
+    @GetMapping("/password")
+    public ResponseEntity<String> getPasswordByUsername(@RequestParam String username) {
+        String password = userService.getPasswordByUsername(username);
+        if (password != null) {
+            return ResponseEntity.status(HttpStatus.OK).body(password);
+        } else {
+            return ResponseEntity.status(HttpStatus.NOT_FOUND).body(null);
+        }
+    }
+
 
 }
