@@ -14,9 +14,9 @@ import org.springframework.stereotype.Service;
 @Service
 public class CalculationService {
 
+    @Autowired
     private final CalculationLogRepository calculationLogRepository;
 
-    @Autowired
     public CalculationService(CalculationLogRepository calculationLogRepository) {
         this.calculationLogRepository = calculationLogRepository;
     }

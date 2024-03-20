@@ -1,6 +1,5 @@
 package edu.ntnu.idatt2105.controller;
 
-import edu.ntnu.idatt2105.model.CalculationLog;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageRequest;
@@ -14,6 +13,7 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
+import edu.ntnu.idatt2105.model.CalculationLog;
 import edu.ntnu.idatt2105.model.CalculationResult;
 import edu.ntnu.idatt2105.model.User;
 import edu.ntnu.idatt2105.service.CalculationService;
@@ -34,7 +34,7 @@ public class CalculatorController {
     @PostMapping("/calculate")
     public ResponseEntity<Double> calculate(@RequestBody CalculationLog calculationLog) {
         try {
-            String equation = calculationLog.getExpression();
+            String equation = calculationLog.getEquation();
             User user = calculationLog.getUser();
 
             double result = calculationService.calculate(equation);
