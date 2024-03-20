@@ -11,3 +11,4 @@ import org.springframework.stereotype.Repository;
 public interface CalculationLogRepository extends JpaRepository<CalculationResult, Long> {
     Page<CalculationResult> findByUserId(Long userId, Pageable pageable);
 }
+
